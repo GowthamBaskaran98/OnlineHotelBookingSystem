@@ -3,9 +3,9 @@ using System.Data.SqlClient;
 using HotelBookingApplication.DAL;
 using HotelBookingApplication.Entity;
 
-namespace HotelBookingAppication
+namespace HotelBookingApplication
 {
-    public partial class a : System.Web.UI.Page
+    public partial class SignUp : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

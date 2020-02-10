@@ -13,8 +13,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HotelBookingAppication</RootNamespace>
-    <AssemblyName>HotelBookingAppication</AssemblyName>
+    <RootNamespace>HotelBookingApplication</RootNamespace>
+    <AssemblyName>HotelBookingApplication</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -94,6 +94,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminPage.aspx" />
+    <Content Include="CustomerPage.aspx" />
+    <Content Include="HotelOwnerPage.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -107,6 +110,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="RegisterHotel.aspx" />
     <Content Include="SignUp.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
@@ -115,9 +119,39 @@
     <Content Include="SignIn.aspx" />
     <Content Include="StyleSheet.css" />
     <Content Include="UserDetail.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminPage.aspx.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage.aspx.designer.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage.aspx.cs">
+      <DependentUpon>CustomerPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerPage.aspx.designer.cs">
+      <DependentUpon>CustomerPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HotelOwnerPage.aspx.cs">
+      <DependentUpon>HotelOwnerPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HotelOwnerPage.aspx.designer.cs">
+      <DependentUpon>HotelOwnerPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterHotel.aspx.cs">
+      <DependentUpon>RegisterHotel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegisterHotel.aspx.designer.cs">
+      <DependentUpon>RegisterHotel.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SignUp.aspx.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

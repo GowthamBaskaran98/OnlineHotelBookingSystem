@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MainForm.Master" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="HotelBookingAppication.a" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="Master" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MainForm.Master" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="HotelBookingApplication.SignUp" %>
+<asp:Content ID="Master" ContentPlaceHolderID="Master" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="Form" runat="server">
+<asp:Content ID="SignUp" ContentPlaceHolderID="Form" runat="server">
     <div>
         <h2 style="background-color : cornflowerblue ">Sign Up</h2>
         <table align ="center" >
@@ -70,9 +70,6 @@
                     <td>  
                         <asp:Button ID="btnSubmit" runat="server" Text="Submit" style="height: 26px"  OnClick ="Submit_Click"/>
                     </td>              
-                    <td>  
-                        <asp:Button ID="Button" runat="server" Text="viewDetail" style="height: 26px"  OnClick ="Display_Click"/>
-                    </td>  
                 </tr>  
             </table>
     </div>

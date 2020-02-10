@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MainForm.Master" AutoEventWireup="true" CodeBehind="SignIn.aspx.cs" Inherits="HotelBookingAppication.SignIn" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MainForm.Master" AutoEventWireup="true" CodeBehind="SignIn.aspx.cs" Inherits="HotelBookingApplication.SignIn" %>
 <asp:Content ID="Master" ContentPlaceHolderID="Master" runat="server">
 </asp:Content>
 <asp:Content ID="SignIn" ContentPlaceHolderID="Form" runat="server">

@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 using HotelBookingApplication.Entity;
 using System.Collections.Generic;
+using System;
 
 namespace HotelBookingApplication.DAL
 {
@@ -12,6 +13,7 @@ namespace HotelBookingApplication.DAL
             string sql = "sp_Registration";
             using (SqlConnection sqlConnection = Connection.GetDBConnection())
             {
+                sqlConnection.Open();
                 SqlCommand sqlCommand = new SqlCommand(sql, sqlConnection);
                 sqlCommand.CommandType = CommandType.StoredProcedure;
                 SqlParameter parameter = new SqlParameter();
@@ -46,6 +48,60 @@ namespace HotelBookingApplication.DAL
                 parameter = new SqlParameter();
                 parameter.ParameterName = "@userType";
                 parameter.Value = data.userType;
+                parameter.SqlDbType = SqlDbType.Char;
+                sqlCommand.Parameters.Add(parameter);
+                int retRows = sqlCommand.ExecuteNonQuery();
+                return retRows;
+            }
+        }
+
+        public int HotelRegistration(Hotel data)
+        {
+            string sql = "sp_RegisterDetail";
+            using (SqlConnection sqlConnection = Connection.GetDBConnection())
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand(sql, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                SqlParameter parameter = new SqlParameter();
+                parameter.ParameterName = "@hotelName";
+                parameter.Value = data.hotelName;
+                parameter.SqlDbType = SqlDbType.Char;
+                sqlCommand.Parameters.Add(parameter);
+                parameter = new SqlParameter();
+                parameter.ParameterName = "@hotelAddress";
+                parameter.Value = data.hotelAddress;
+                parameter.SqlDbType = SqlDbType.Char;
+                parameter.Size = 20;
+                sqlCommand.Parameters.Add(parameter);
+                parameter = new SqlParameter();
+                parameter.ParameterName = "@totalRoom";
+                parameter.Value = data.totalRoom;
+                parameter.SqlDbType = SqlDbType.Int;
+                sqlCommand.Parameters.Add(parameter);
+                parameter = new SqlParameter();
+                parameter.ParameterName = "@bookedRoom";
+                parameter.Value = data.bookedRoom;
+                parameter.SqlDbType = SqlDbType.Int;
+                sqlCommand.Parameters.Add(parameter);
+                parameter = new SqlParameter();
+                parameter.ParameterName = "@availableRoom";
+                parameter.Value = data.availableRoom;
+                parameter.SqlDbType = SqlDbType.Int;
+                sqlCommand.Parameters.Add(parameter);
+                parameter = new SqlParameter();
+                parameter.ParameterName = "@roomAmenities";
+                parameter.Value = data.roomAmenities;
+                parameter.SqlDbType = SqlDbType.Char;
+                sqlCommand.Parameters.Add(parameter);
+                parameter = new SqlParameter();
+                parameter.ParameterName = "@pricePerDay";
+                parameter.Value = data.pricePerDay;
+                parameter.SqlDbType = SqlDbType.Int;
+                sqlCommand.Parameters.Add(parameter);
+                parameter = new SqlParameter();
+                parameter.ParameterName = "@approvalStatus";
+                parameter.Value = "Pending";
                 parameter.SqlDbType = SqlDbType.Char;
                 sqlCommand.Parameters.Add(parameter);
                 int retRows = sqlCommand.ExecuteNonQuery();
@@ -98,22 +154,29 @@ namespace HotelBookingApplication.DAL
             }
         }
         public static List<User> userList = new List<User>();
-        public int LogIn(User user, SqlConnection sqlConnection)
+        public string LogIn(User user, SqlConnection sqlConnection)
         {
             using (SqlCommand sqlCommand = new SqlCommand("sp_LogIn", sqlConnection))
             {
+                sqlConnection.Open();
                 sqlCommand.CommandType = CommandType.StoredProcedure;
                 sqlCommand.Parameters.AddWithValue("@gmail", user.gmail);
                 sqlCommand.Parameters.AddWithValue("@password", user.password);
-                sqlConnection.Open();
+                sqlCommand.Parameters.Add("@userType", SqlDbType.VarChar, 15);
+                sqlCommand.Parameters["@userType"].Direction = ParameterDirection.Output;
+                //string type = Convert.ToString(sqlCommand.Parameters["@userType"].Value);
                 SqlDataReader data = sqlCommand.ExecuteReader();
-                if (data.HasRows)
+                if (Convert.ToString(sqlCommand.Parameters["@userType"].Value)=="Admin")
                 {
-                    return 1;
+                    return "Admin";
+                }
+                else if (Convert.ToString(sqlCommand.Parameters["@userType"].Value) == "Customer")
+                {
+                    return "Customer";
                 }
                 else
                 {
-                    return 0;
+                    return "HotelOwner";
                 }
             }
         }

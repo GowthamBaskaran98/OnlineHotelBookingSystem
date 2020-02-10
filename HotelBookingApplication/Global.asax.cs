@@ -7,7 +7,7 @@ using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.UI;
 
-namespace HotelBookingAppication
+namespace HotelBookingApplication
 {
     public class Global : System.Web.HttpApplication
     {

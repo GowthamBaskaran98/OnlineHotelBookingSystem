@@ -4,7 +4,7 @@ using HotelBookingApplication.DAL;
 using HotelBookingApplication.Entity;
 using System.Web.UI.WebControls;
 
-namespace HotelBookingAppication
+namespace HotelBookingApplication
 {
     public partial class UserDetail : System.Web.UI.Page
     {
@@ -19,8 +19,11 @@ namespace HotelBookingAppication
         {
             UserRepository userRepository = new UserRepository();
             DataTable data = userRepository.ViewDetails();
-            UserProfile.DataSource = data;
-            UserProfile.DataBind();
+            if (data.Rows.Count > 0)
+            {
+                UserProfile.DataSource = data;
+                UserProfile.DataBind();
+            }
         }
         protected void UserProfile_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {

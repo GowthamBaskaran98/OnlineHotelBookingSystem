@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace HotelBookingAppication
+namespace HotelBookingApplication
 {
     public partial class MainForm : System.Web.UI.MasterPage
     {

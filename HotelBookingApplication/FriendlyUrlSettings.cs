@@ -1,4 +1,4 @@
-﻿namespace HotelBookingAppication
+﻿namespace HotelBookingApplication
 {
     internal class FriendlyUrlSettings
     {

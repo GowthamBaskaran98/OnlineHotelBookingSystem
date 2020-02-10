@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HotelBookingAppication {
+namespace HotelBookingApplication {
     
     
     public partial class MainForm {

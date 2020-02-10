@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HotelBookingAppication {
+namespace HotelBookingApplication {
     
     
-    public partial class UserDetail {
+    public partial class HotelOwnerPage {
         
         /// <summary>
-        /// UserProfile control.
+        /// HotelRegistration control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView UserProfile;
+        protected global::System.Web.UI.WebControls.Button HotelRegistration;
     }
 }

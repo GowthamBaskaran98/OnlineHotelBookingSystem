@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelBookingAppication", "HotelBookingAppication\HotelBookingAppication.csproj", "{7332359E-AD6D-403C-8BF3-D096A8353D68}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelBookingApplication.DAL", "HotelBookingApplication.DAL\HotelBookingApplication.DAL.csproj", "{1461957D-14F0-445D-A6AA-928A36D10222}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelBookingApplication.Entity", "HotelBookingApplication.Entity\HotelBookingApplication.Entity.csproj", "{15EAB7F3-8302-457D-81F9-455D40EC7167}"
@@ -15,16 +13,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelBookingApplication.PL"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelBookingApplication.BL", "HotelBookingApplication.BL\HotelBookingApplication.BL.csproj", "{B5281ACB-9117-421A-8E24-79D44DFD7655}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelBookingApplication", "HotelBookingApplication\HotelBookingApplication.csproj", "{7332359E-AD6D-403C-8BF3-D096A8353D68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7332359E-AD6D-403C-8BF3-D096A8353D68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7332359E-AD6D-403C-8BF3-D096A8353D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7332359E-AD6D-403C-8BF3-D096A8353D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7332359E-AD6D-403C-8BF3-D096A8353D68}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1461957D-14F0-445D-A6AA-928A36D10222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1461957D-14F0-445D-A6AA-928A36D10222}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1461957D-14F0-445D-A6AA-928A36D10222}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +41,10 @@ Global
 		{B5281ACB-9117-421A-8E24-79D44DFD7655}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5281ACB-9117-421A-8E24-79D44DFD7655}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5281ACB-9117-421A-8E24-79D44DFD7655}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7332359E-AD6D-403C-8BF3-D096A8353D68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7332359E-AD6D-403C-8BF3-D096A8353D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7332359E-AD6D-403C-8BF3-D096A8353D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7332359E-AD6D-403C-8BF3-D096A8353D68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

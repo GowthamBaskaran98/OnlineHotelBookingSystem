@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HotelBookingAppication
+namespace HotelBookingApplication
 {
 
 
-    public partial class Home
+    public partial class CustomerPage
     {
     }
 }

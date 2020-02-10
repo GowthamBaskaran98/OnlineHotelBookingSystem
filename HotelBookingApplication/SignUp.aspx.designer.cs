@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HotelBookingAppication {
+namespace HotelBookingApplication {
     
     
-    public partial class a {
+    public partial class SignUp {
         
         /// <summary>
         /// txtFirstName control.
@@ -164,14 +164,5 @@ namespace HotelBookingAppication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubmit;
-        
-        /// <summary>
-        /// Button control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button;
     }
 }

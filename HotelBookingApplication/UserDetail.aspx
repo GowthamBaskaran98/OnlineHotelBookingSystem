@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MainForm.Master" AutoEventWireup="true" CodeBehind="UserDetail.aspx.cs" Inherits="HotelBookingAppication.UserDetail" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MainForm.Master" AutoEventWireup="true" CodeBehind="UserDetail.aspx.cs" Inherits="HotelBookingApplication.UserDetail" %>
 <asp:Content ID="Master" ContentPlaceHolderID="Master" runat="server">
 </asp:Content>
 <asp:Content ID="UserDetail" ContentPlaceHolderID="Form" runat="server">

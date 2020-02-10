@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainForm.master.cs" Inherits="HotelBookingAppication.MainForm" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainForm.master.cs" Inherits="HotelBookingApplication.MainForm" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -21,20 +21,19 @@ h1 {
     height:10%;
     width:10%;
 }
+Button{
+    style="margin-left:1100px"
+}
 </style>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-        <div class="Form" id="title" align="center">
-        <h1 style="background-color : aqua">HOTEL BOOKING APP</h1> 
-            </div>
-        <div align="right">
-                <span style="margin-left:1100px">
+        <div class="Form" id="title">
+        <h1  align="center" style="background-color : aqua" >HOTEL BOOKING APP</h1> 
                     <asp:Button ID="Home" runat="server" Text="Home" BackColor="#00ff00" BorderWidth="0" OnClick="Home_Click"/>
                     <asp:Button ID="Login" runat="server" Text="Login" BackColor="#00ff00" BorderWidth="0" OnClick="Login_Click"/>
                     <asp:Button ID="Register" runat="server" Text="Register" BackColor="#00ff00" BorderWidth="0" OnClick="Register_Click"/>
-                </span>
             </div>
         <asp:ContentPlaceHolder ID="Form" runat="server">
         </asp:ContentPlaceHolder>
